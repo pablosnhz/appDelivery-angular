@@ -1,0 +1,27 @@
+#container {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  // background-color: rgb(255, 226, 188);
+  background-color: rgb(255, 183, 89);
+  border-radius: 25px 25px 0 0;
+  border: 2px solid rgba(149, 149, 149, 0.168);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 40px 4px;
+  height: 50px;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    margin: auto;
+    display: block;
+  }
+}
+
+.seleccionado {
+  background-color: #00000038;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3) inset;
+}
