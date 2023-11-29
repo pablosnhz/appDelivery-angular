@@ -27,7 +27,7 @@ export class TabsComponent {
             break;
           default:
             this.seleccionado = [false, false, false, false];
-            break
+            break;
         }
       }
     })
