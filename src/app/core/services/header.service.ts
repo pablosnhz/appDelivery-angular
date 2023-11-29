@@ -8,4 +8,5 @@ export class HeaderService {
   constructor() { }
 
   titulo = signal('DeliApp');
+  extension = signal(false);
 }

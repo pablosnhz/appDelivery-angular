@@ -1,13 +1,36 @@
 header {
-  height: 200px;
-  // background-color: #00000020;
-  color: #fff;
-  background-image: url(./../../../../assets/background/header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  height: 80px;
+  color: aqua;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 500ms ease-in-out;
+}
+
+header ::before {
+  position: absolute;
+  content: '';
+  background-image: url(./../../../../assets/background/header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 500ms;
+}
+
+header.extension ::before {
+  opacity: 0.8;
+}
+
+.extension {
+  height: 200px;
+  background-color: unset;
 }
 
 h1 {
