@@ -1,0 +1,30 @@
+#container {
+  height: 100px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+#foto {
+  height: 100%;
+  width: 25%;
+  background-size: cover;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+ul li {
+  display: inline;
+  &:not(:last-of-type)::after{
+    content: ',';
+  }
+}
+
+#precio {
+  text-align: end;
+}
+
+
