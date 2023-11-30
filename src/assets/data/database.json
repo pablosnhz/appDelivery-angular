@@ -2,13 +2,13 @@
   {
     "id": 1,
     "nombre": "Pizzas",
-    "fotoUrl": "https://www.laespanolaaceites.com/wp-content/uploads/2019/06/pizza-con-chorizo-jamon-y-queso-1080x671.jpg",
+    "fotoUrl": "https://t3.ftcdn.net/jpg/06/39/44/24/360_F_639442426_W9G5DE7oldar0ANlS6AJ39kYFdAh9BKg.jpg",
     "productos": []
   },
   {
     "id": 2,
     "nombre": "Hamburguesas",
-    "fotoUrl": "https://img.freepik.com/vector-gratis/hamburguesa-realista-sobre-fondo-pizarra_79603-1042.jpg?w=2000",
+    "fotoUrl": "https://media-cdn.tripadvisor.com/media/photo-s/17/e4/72/89/tbr.jpg",
     "productos": [
       {
         "id": "1",
@@ -69,25 +69,25 @@
   {
     "id": 3,
     "nombre": "Postres",
-    "fotoUrl": "https://www.recetasnestle.com.ar/sites/default/files/2023-03/postre-en-vaso-dulce-leche.jpg.jpg",
+    "fotoUrl": "https://www.parati.com.ar/wp-content/uploads/2022/02/Cheescake-1-1280x720.png",
     "productos": []
   },
   {
     "id": 4,
     "nombre": "Bebidas",
-    "fotoUrl": "https://img.band.uol.com.br/image/2023/02/09/bebidas-alcoolicas-181014_800x450.webp",
+    "fotoUrl": "https://bodegalaus.es/wp-content/wpallimport/files/presentacion-vinos-laus-mexico-75511.jpg",
     "productos": []
   },
   {
     "id": 5,
     "nombre": "Combos",
-    "fotoUrl": "https://i-ticketing.iwos.com/1000x1000-th/products/220/products_220_2.png",
+    "fotoUrl": "https://billiken.lat/wp-content/uploads/2023/02/pizza-fb-1.jpg",
     "productos": []
   },
   {
     "id": 6,
     "nombre": "Recomendados",
-    "fotoUrl": "https://eldiariony.com/wp-content/uploads/sites/2/2023/06/shutterstock_521741356.jpg?resize=360,270&quality=80",
+    "fotoUrl": "https://www.paulinacocina.net/wp-content/uploads/2023/06/cenas-saludables-y-rapidas.jpg",
     "productos": []
   }
 ]
