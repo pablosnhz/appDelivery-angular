@@ -18,7 +18,7 @@ const routes: Routes = [
     component: CarritoComponent
   },
   {
-    path: 'rubro',
+    path: 'categoria/:id',
     component: RubroComponent
   },
   {

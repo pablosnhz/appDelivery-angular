@@ -4,13 +4,14 @@ import { CategoriasService } from '../../core/services/categorias.service';
 import { Categoria } from 'src/app/core/interfaces/categorias';
 import { TarjetaCategoriaComponent } from 'src/app/core/components/tarjeta-categoria/tarjeta-categoria.component';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [TarjetaCategoriaComponent, CommonModule]
+  imports: [TarjetaCategoriaComponent, CommonModule, RouterModule]
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
