@@ -4,12 +4,16 @@ import { ActivatedRoute } from '@angular/router';
 import { Producto } from 'src/app/core/interfaces/productos';
 import { HeaderService } from 'src/app/core/services/header.service';
 import { ProductosService } from '../../core/services/productos.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-articulo',
   templateUrl: './articulo.component.html',
-  styleUrls: ['./articulo.component.scss']
+  styleUrls: ['./articulo.component.scss'],
+  standalone: true,
+  imports: [CommonModule]
 })
+
 export class ArticuloComponent {
 
   headerService = inject(HeaderService);
