@@ -1,30 +1,57 @@
 #container {
-  height: 100px;
+  height: 80px;
   display: flex;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid #000;
+  border: none ;
+  background-color: rgba(255, 228, 196, 0.656);
 }
 
 #foto {
+  flex: 2;
   height: 100%;
   width: 25%;
   background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  img{
+    height: 20px;
+    margin-bottom: 5px;
+    background-color: rgb(178, 255, 178);
+    border-radius: 50px;
+    &:first-child{
+      margin-left: 5px;
+    }
+  }
+}
+
+#detalles {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }
 
 h4 {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 ul li {
   display: inline;
+  font-size: small;
   &:not(:last-of-type)::after{
     content: ',';
+    margin-left: -3px;
   }
 }
 
 #precio {
   text-align: end;
+  font-weight: bold;
 }
 
 

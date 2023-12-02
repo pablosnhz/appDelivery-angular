@@ -22,7 +22,7 @@ const routes: Routes = [
     component: RubroComponent
   },
   {
-    path: 'articulo',
+    path: 'articulo/:id',
     component: ArticuloComponent
   },
   {

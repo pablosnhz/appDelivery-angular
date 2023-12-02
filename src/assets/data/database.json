@@ -13,56 +13,56 @@
       {
         "id": "1",
         "nombre":"Hamburguesa con queso",
-        "precio": 0,
+        "precio": 2000,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Pan Brioche","Queso"],
-        "fotoUrl": "https://quem.com.ar/tienda/wp-content/uploads/2020/12/Grandwich_17-10_-061.jp"
+        "fotoUrl": "https://fricopan.es/wp-content/uploads/2020/02/5e43a8c312b0b9249048b68d-940x675.jpeg"
       },
       {
         "id": "2",
         "nombre":"Hamburguesa especial",
-        "precio": 0,
+        "precio": 2500,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Pan Brioche","Queso", "Tomate", "Lechuga"],
-        "fotoUrl": "https://elsheriffburger.com/uploads/lh90_elsheriffbuger/products/54/es/img-H.-Especial-5-WEB-de-taman%CC%83o-mediano.jpg"
+        "fotoUrl": "https://estaticos-cdn.prensaiberica.es/clip/bf7d0031-5b6e-4bf5-8dd1-2c44703625d4_16-9-aspect-ratio_default_0.jpg"
       },
       {
         "id": "3",
         "nombre":"Hamburguesa vegana",
-        "precio": 0,
+        "precio": 2500,
         "esVegano":true,
         "esCeliaco":false,
         "ingredientes": ["Medallón a base de lentejas","Pan Brioche","Tomate"],
-        "fotoUrl": "https://www.pequerecetas.com/wp-content/uploads/2009/04/hamburguesa-de-garbanzos-casera-receta.jpg"
+        "fotoUrl": "https://i0.wp.com/veganista.es/wp-content/uploads/2018/04/IMG_20180424_141630.jpg?resize=624%2C509"
       },
       {
         "id": "4",
         "nombre":"Hamburguesa celíaca",
-        "precio": 0,
+        "precio": 2000,
         "esVegano":false,
         "esCeliaco":true,
         "ingredientes": ["Carne de ternera","Pan libre de tacc","Queso"],
-        "fotoUrl": "https://www.perez-h.com/newsite/wp-content/uploads/2016/06/queso-2.jpg"
+        "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWaSkMtSOL-C0nnF_PT3M41y7JhmiYnubl6U139IEO8t0_ukPBGsgWUJX-GGgRzOmLN8A&usqp=CAU"
       },
       {
         "id": "5",
         "nombre":"Hamburguesa americana",
-        "precio": 0,
+        "precio": 4000,
         "esVegano":false,
         "esCeliaco":false,
         "ingredientes": ["Carne de ternera","Pan Brioche","Queso","Salsa secreta BBQ", "Panceta"],
-        "fotoUrl": "https://www.clarin.com/img/2022/05/27/0HXb0UR0v_2000x1500__1.jpg"
+        "fotoUrl": "https://st5.depositphotos.com/79323824/66273/i/450/depositphotos_662730484-stock-photo-juicy-burger-featuring-melted-cheese.jpg"
       },
       {
         "id": "6",
-        "nombre":"Medallón platero",
-        "precio": 0,
+        "nombre":"Medallones",
+        "precio": 3000,
         "esVegano":true,
         "esCeliaco":true,
         "ingredientes": ["Medallón a base de lentejas","Tomate","Lechuga"],
-        "fotoUrl": "https://canalcocina.es/medias/images/1010_Coc_RecetasDeAnnie_HamburguesaQueso.jpg"
+        "fotoUrl": "https://t1.uc.ltmcdn.com/es/posts/3/2/9/medallones_de_lentejas_50923_0_600.jpg"
       }
     ]
   },
