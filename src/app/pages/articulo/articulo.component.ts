@@ -31,6 +31,7 @@ export class ArticuloComponent {
         this.ProductosService.getById(param['id'])
         .then(producto => {
           this.producto = producto;
+          this.headerService.titulo.set(producto!.nombre)
         })
       }
     })

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { HeaderService } from 'src/app/core/services/header.service';
@@ -15,7 +15,7 @@ import { CategoriasService } from '../../core/services/categorias.service';
   templateUrl: './rubro.component.html',
   styleUrls: ['./rubro.component.scss'],
   standalone: true,
-  imports: [TarjetaProductoComponent, CommonModule]
+  imports: [TarjetaProductoComponent, CommonModule, RouterModule]
 })
 export class RubroComponent {
 
