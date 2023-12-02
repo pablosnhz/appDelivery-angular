@@ -1,0 +1,19 @@
+#container {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+button {
+  border: unset;
+  font-weight: bold;
+  background-color: #a9a9a979;
+  padding: 0 10px;
+}
+
+span {
+  line-height: 30px;
+}

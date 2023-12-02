@@ -1,7 +1,19 @@
 #fotoProducto {
   width: 100%;
   max-height: 300px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  max-height: 300px;
   object-fit: cover;
+}
+
+.margen-pequeno {
+  margin-top: 230px;
+}
+
+.margen-pequeno > * {
+  margin-bottom: 10px;
 }
 
 ul li {
@@ -12,9 +24,6 @@ ul li {
   }
 }
 
-.margen-pequeno > * {
-  margin-bottom: 10px;
-}
 
 .apto-container {
   display: flex;
@@ -31,12 +40,14 @@ textarea {
   border-radius: 20px;
   border: unset;
   background-color: rgba(200, 200, 200, 0.409);
+  margin-top: 10px;
   width: 100%;
 }
 
 #cantidad-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 button {
