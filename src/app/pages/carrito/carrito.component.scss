@@ -63,3 +63,47 @@
   padding: 10px 20px;
   border-radius: 10px;
 }
+
+#imagen {
+    cursor: pointer;
+    width: 30px;
+    padding: 0;
+  }
+
+#informacion {
+  font-size: larger;
+}
+
+#envios-container {
+  background-color: rgba(120, 120, 120, 0.124);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  align-items: center;
+  h4 {
+    font-size: larger;
+  }
+}
+
+#montos {
+  text-align: end;
+}
+
+#totales > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#enviar {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  font-size: larger;
+  background-color: rgba(120, 120, 120, 0.124);
+  border-radius: 10px;
+  border: unset;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: bold;
+}

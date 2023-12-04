@@ -21,16 +21,34 @@ export class CarritoComponent {
 
   productosCarrito: Producto[]=[];
 
+  subtotal = 0;
+  delivery = 100;
+  total = 0;
+
   ngOnInit(): void {
     this.headerService.titulo.set('Carrito');
     this.CarritoService.carrito.forEach(async itemCarrito => {
       const res = await this.ProductosService.getById(itemCarrito.idProducto)
       if(res) this.productosCarrito.push(res);
+
+    this.calcularInformacion();
     })
-    console.log(this.productosCarrito)
   }
 
   eliminarProducto(idProducto : number){
     this.CarritoService.eliminarProducto(idProducto);
+  }
+
+  calcularInformacion(){
+    this.subtotal = 0;
+    for (let i = 0; i < this.CarritoService.carrito.length; i++) {
+      this.subtotal += this.productosCarrito[i].precio * this.CarritoService.carrito[i].cantidad;
+    }
+    this.total = this.subtotal + this.delivery;
+  }
+
+  cambiarCantidadProducto(id: number, cantidad: number){
+    this.CarritoService.cambiarCantidadProducto(id, cantidad)
+    this.calcularInformacion();
   }
 }

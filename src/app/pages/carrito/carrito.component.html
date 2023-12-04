@@ -12,7 +12,7 @@
 
       <div id="centro">
       <p class="negrita">{{ productosCarrito[i].nombre }}</p>
-      <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="CarritoService.cambiarCantidadProducto(producto.idProducto, $event)"></app-contador-cantidad>
+      <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto, $event)"></app-contador-cantidad>
       <p *ngIf="producto.notas !== ''">{{ producto.notas }}</p>
     </div>
     <div id="derecha">
@@ -30,13 +30,28 @@
   <a id="mas" [routerLink]="['/']" routerLinkActive="router-link-active">+</a>
 </div>
 
-<section>
+<section class="margen-pequeno" id="informacion">
   <h3>Direccion de Envio</h3>
+  <div class="flex-apart" id="envios-container">
+    <div>
+      <h4>Yapeyu 320</h4>
+      <p>Buenos Aires 2000</p>
+    </div>
   <div>
-    <h4>Yapeyu</h4>
-    <p>Buenos Aires 2000</p>
+    <a [routerLink]="['/perfil']" routerLinkActive="router-link-active"><img id="imagen" src="./../../../assets/background/edit.svg" alt="Edit"></a>
   </div>
-  <div>
-    <img src="./../../../assets/background/edit.svg" alt="edit">
   </div>
+  <div id="totales" class="flex-apart">
+    <div>
+      <p class="negrita">Subtotal</p>
+      <p>Delivery</p>
+      <p class="negrita">Total</p>
+    </div>
+    <div id="montos">
+      <p class="negrita">$<span>{{ subtotal }}</span></p>
+      <p>$<span>{{ delivery }}</span></p>
+      <p class="negrita">$<span>{{ total }}</span></p>
+    </div>
+  </div>
+  <button id="enviar">Enviar Mensaje</button>
 </section>
