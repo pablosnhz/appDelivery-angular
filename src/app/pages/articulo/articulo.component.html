@@ -23,6 +23,6 @@
   <label for="cantidad">Cantidad:</label>
   <app-contador-cantidad (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
   </div>
-  <button>Agregar al carrito</button>
+  <button (click)="agregarAlCarrito()" >Agregar al carrito</button>
 
 </div>

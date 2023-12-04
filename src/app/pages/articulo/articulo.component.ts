@@ -1,11 +1,13 @@
 import { Component, inject, signal } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 import { Producto } from 'src/app/core/interfaces/productos';
+import { ContadorCantidadComponent } from "../../core/components/contador-cantidad/contador-cantidad.component";
 import { HeaderService } from 'src/app/core/services/header.service';
 import { ProductosService } from '../../core/services/productos.service';
-import { CommonModule } from '@angular/common';
-import { ContadorCantidadComponent } from "../../core/components/contador-cantidad/contador-cantidad.component";
+import { CarritoService } from 'src/app/core/services/carritoProd.service';
 
 @Component({
     selector: 'app-articulo',
@@ -19,6 +21,8 @@ export class ArticuloComponent {
 
   headerService = inject(HeaderService);
   ProductosService = inject(ProductosService);
+  CarritoService = inject(CarritoService);
+
 
   producto? : Producto;
   cantidad = signal(1);
@@ -27,7 +31,7 @@ export class ArticuloComponent {
     this.headerService.titulo.set('Articulo')
   }
 
-  constructor(private ac: ActivatedRoute){
+  constructor(private ac: ActivatedRoute, private router: Router){
     ac.params.subscribe(param => {
       if(param['id']){
         this.ProductosService.getById(param['id'])
@@ -38,4 +42,11 @@ export class ArticuloComponent {
       }
     })
   }
+
+  agregarAlCarrito(){
+    if(!this.producto) return;
+    this.CarritoService.agregarProducto(this.producto?.id, this.cantidad())
+    this.router.navigate(['/carrito']);
+  }
+
 }
