@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, signal, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contador-cantidad',
@@ -7,9 +7,13 @@ import { Component, EventEmitter, Output, signal } from '@angular/core';
   standalone: true,
   imports: []
 })
-export class ContadorCantidadComponent {
+export class ContadorCantidadComponent implements OnInit {
+  ngOnInit(): void {
+    this.numero.set(this.cantidadInicial)
+  }
 
   @Output() cantidadCambiada = new EventEmitter<number>();
+  @Input() cantidadInicial = 1;
 
   numero = signal(1);
 
