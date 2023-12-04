@@ -11,18 +11,20 @@ export class CarritoService {
   carrito: Carrito[] = [
     {
       idProducto: 1,
-      cantidad: 2
+      cantidad: 2,
+      notas: '',
     },
     {
       idProducto: 3,
       cantidad: 1,
+      notas: '',
     }
   ]
 
-  agregarProducto(idProducto: number, cantidad: number){
+  agregarProducto(idProducto: number, cantidad: number, notas: string){
     const i = this.carrito.findIndex(producto => producto.idProducto === idProducto)
     if(i === -1){
-      const nuevoProducto = { idProducto: idProducto, cantidad: cantidad }
+      const nuevoProducto: Carrito = { idProducto: idProducto, cantidad: cantidad, notas: notas }
       this.carrito.push(nuevoProducto)
       } else {
         this.carrito[i].cantidad += cantidad;

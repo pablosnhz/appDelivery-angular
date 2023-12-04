@@ -2,4 +2,5 @@
 <div *ngFor="let producto of CarritoService.carrito">
   <p>Producto: {{ producto.idProducto }}</p> <button (click)="eliminarProducto(producto.idProducto)">X</button>
   <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="CarritoService.cambiarCantidadProducto(producto.idProducto, $event)"></app-contador-cantidad>
+  <p *ngIf="producto.notas !== ''">{{ producto.notas }}</p>
 </div>

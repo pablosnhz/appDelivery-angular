@@ -18,7 +18,7 @@
 </div>
 
   <label for="notas">Notas:</label>
-  <textarea name="notas" id="notas" cols="30" rows="10"></textarea>
+  <textarea name="notas" id="notas" cols="30" rows="10" [(ngModel)]="notas"></textarea>
   <div id="cantidad-container">
   <label for="cantidad">Cantidad:</label>
   <app-contador-cantidad (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
