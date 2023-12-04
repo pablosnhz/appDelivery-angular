@@ -1,1 +1,19 @@
-<p>perfil works!</p>
+<form #formulario="ngForm" class="margen-pequeno">
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre" [(ngModel)]="perfil.nombre">
+  </div>
+  <div>
+    <label for="direccion">Direccion</label>
+    <input type="text" name="direccion" id="direccion" [(ngModel)]="perfil.direccion">
+  </div>
+  <div>
+    <label for="">Notas</label>
+    <input type="text" name="notas" id="notas" [(ngModel)]="perfil.detalleEntrega">
+  </div>
+  <div>
+    <label for="">Telefono</label>
+    <input type="number" name="telefono" id="telefono" [(ngModel)]="perfil.telefono">
+  </div>
+  <button>Enviar</button>
+</form>
