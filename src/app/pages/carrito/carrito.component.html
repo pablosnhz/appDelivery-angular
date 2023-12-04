@@ -1,6 +1,42 @@
-<p>carrito works!</p>
-<div *ngFor="let producto of CarritoService.carrito">
-  <p>Producto: {{ producto.idProducto }}</p> <button (click)="eliminarProducto(producto.idProducto)">X</button>
-  <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="CarritoService.cambiarCantidadProducto(producto.idProducto, $event)"></app-contador-cantidad>
-  <p *ngIf="producto.notas !== ''">{{ producto.notas }}</p>
+
+<div id="tarjetas-container" class="margen-pequeno">
+  <div *ngFor="let producto of CarritoService.carrito, index as i" class="tarjeta-producto-container">
+    <ng-container *ngIf="productosCarrito[i]">
+
+    <div id="izquierda"[ngStyle]="{'background-image': 'url('+productosCarrito[i].fotoUrl+')'}">
+      <div>
+        <img *ngIf="productosCarrito[i].esCeliaco" src="./../../../assets/background/celiaco.png" alt="Apto Celiaco">
+        <img *ngIf="productosCarrito[i].esVegano" src="./../../../assets/background/hoja.png" alt="Apto Vegano">
+      </div>
+    </div>
+
+      <div id="centro">
+      <p class="negrita">{{ productosCarrito[i].nombre }}</p>
+      <app-contador-cantidad [cantidadInicial]="producto.cantidad" (cantidadCambiada)="CarritoService.cambiarCantidadProducto(producto.idProducto, $event)"></app-contador-cantidad>
+      <p *ngIf="producto.notas !== ''">{{ producto.notas }}</p>
+    </div>
+    <div id="derecha">
+      <button (click)="eliminarProducto(producto.idProducto)" id="borrar">
+        <img src="./../../../assets/background/borrar.svg" alt="">
+      </button>
+      <p class="negrita">${{ productosCarrito[i].precio }}</p>
+    </div>
+
+    </ng-container>
+  </div>
 </div>
+
+<div class="flex-center">
+  <a id="mas" [routerLink]="['/']" routerLinkActive="router-link-active">+</a>
+</div>
+
+<section>
+  <h3>Direccion de Envio</h3>
+  <div>
+    <h4>Yapeyu</h4>
+    <p>Buenos Aires 2000</p>
+  </div>
+  <div>
+    <img src="./../../../assets/background/edit.svg" alt="edit">
+  </div>
+</section>

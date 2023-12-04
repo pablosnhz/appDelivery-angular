@@ -6,20 +6,14 @@ import { Carrito } from '../interfaces/carrito-s';
 })
 export class CarritoService {
 
-  constructor() { }
-
-  carrito: Carrito[] = [
-    {
-      idProducto: 1,
-      cantidad: 2,
-      notas: '',
-    },
-    {
-      idProducto: 3,
-      cantidad: 1,
-      notas: '',
+  constructor() {
+    const cart = localStorage.getItem('carrito')
+    if(cart){
+      this.carrito = JSON.parse(cart);
     }
-  ]
+  }
+
+  carrito: Carrito[] = []
 
   agregarProducto(idProducto: number, cantidad: number, notas: string){
     const i = this.carrito.findIndex(producto => producto.idProducto === idProducto)
@@ -29,11 +23,14 @@ export class CarritoService {
       } else {
         this.carrito[i].cantidad += cantidad;
       }
+      this.actualizarAlmacenamiento();
     }
 
 
   eliminarProducto(idProducto: number){
     this.carrito = this.carrito.filter(producto => producto.idProducto !== idProducto)
+    if(this.carrito.length === 0) return localStorage.clear()
+    this.actualizarAlmacenamiento();
   }
 
   cambiarCantidadProducto(idProducto: number, cantidad: number){
@@ -42,6 +39,12 @@ export class CarritoService {
       if(productoActual.idProducto === idProducto) productoActual.cantidad = cantidad;
       return productoActual;
     })
+    this.actualizarAlmacenamiento();
   }
+
+  actualizarAlmacenamiento(){
+    localStorage.setItem('carrito', JSON.stringify(this.carrito))
+  }
+
 }
 

@@ -1,0 +1,65 @@
+#tarjetas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tarjeta-producto-container {
+  position: relative;
+  display: flex;
+  height: 100px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+
+#izquierda {
+  width: 35%;
+  background-color: blue;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  > div {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    img {
+      height: 20px;
+      background-color: rgb(135, 219, 10);
+      border-radius: 50%;
+    }
+  }
+}
+
+#centro {
+  width: 55%;
+  background-color: rgba(120, 120, 120, 0.124);
+}
+
+#derecha {
+  width: 10%;
+  background-color: rgba(120, 120, 120, 0.124);
+  align-items: flex-end;
+}
+
+#borrar {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  width: 20px;
+  padding: 0;
+}
+
+#mas {
+  font-size: xx-large;
+  text-decoration: none;
+  color: black;
+  background-color: rgba(120, 120, 120, 0.124);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
