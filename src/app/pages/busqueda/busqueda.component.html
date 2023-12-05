@@ -1,1 +1,24 @@
-<p>busqueda works!</p>
+<form #buscarForm="ngForm" (change)="buscar()">
+<div id="barra-busqueda">
+  <img src="./../../../assets/background/busqueda.svg" alt="busqueda">
+  <input type="text" name="texto" [(ngModel)]="parametrosBusqueda.texto">
+</div>
+<div id="filtros-container">
+  <div class="apto-container">
+    <img src="./../../../assets/background/celiaco.png" alt="Apto Celiaco">
+      <input type="checkbox" name="celiaco" id="celiaco" [(ngModel)]="parametrosBusqueda.aptoCeliaco">
+    <span>Apto Celiaco</span>
+  </div>
+  <div class="apto-container">
+    <img src="./../../../assets/background/hoja.png" alt="Apto Vegano">
+      <input type="checkbox" name="vegano" id="vegano" [(ngModel)]="parametrosBusqueda.aptoVegano">
+    <span>Apto Vegano</span>
+  </div>
+</div>
+</form>
+
+
+<div id="contenedor-productos">
+  <app-tarjeta-producto *ngFor="let producto of productos"
+  [producto]="producto"></app-tarjeta-producto>
+</div>

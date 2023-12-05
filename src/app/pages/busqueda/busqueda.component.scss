@@ -1,0 +1,41 @@
+#barra-busqueda {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  background-color: rgba(120, 120, 120, 0.124);
+  border-radius: 10px;
+  margin: 20px 10%;
+  padding: 5px 10px;
+  input {
+    width: 100%;
+    background-color: unset;
+    border: unset;
+    font-size: large;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+#filtros-container{
+  display: flex;
+  justify-content: space-evenly;
+  height: 25px;
+}
+
+.apto-container {
+  display: flex;
+  align-items: center;
+  height: 25px;
+}
+
+img {
+  height: 100%;
+}
+
+#contenedor-productos{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
