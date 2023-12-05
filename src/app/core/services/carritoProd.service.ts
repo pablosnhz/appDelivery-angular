@@ -46,5 +46,10 @@ export class CarritoService {
     localStorage.setItem('carrito', JSON.stringify(this.carrito))
   }
 
+  vaciarCarrito(){
+    this.carrito = [];
+    localStorage.clear();
+  }
+
 }
 

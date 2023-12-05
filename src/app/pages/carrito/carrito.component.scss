@@ -1,3 +1,9 @@
+h2 {
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 50px;
+}
+
 #tarjetas-container {
   display: flex;
   flex-direction: column;
@@ -107,3 +113,39 @@
   padding: 15px;
   font-weight: bold;
 }
+
+dialog {
+  padding: 20px;
+  background-color: rgb(152, 152, 152);
+  border-radius: 10px;
+  border: unset;
+  -webkit-box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.75);
+  div {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  button{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    &:first-of-type{
+      background-color: rgb(162, 215, 162);
+    }
+    &:last-of-type{
+      background-color: rgb(215, 162, 162);
+    }
+    span:first-child {
+      font-size: x-large;
+    }
+  }
+  p{
+    font-size: x-large;
+    text-align: center;
+  }
+}
+
