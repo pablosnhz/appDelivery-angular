@@ -1,12 +1,14 @@
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, WritableSignal, inject, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
+
 import { HeaderService } from 'src/app/core/services/header.service';
 import { CarritoService } from '../../core/services/carritoProd.service';
-import { CommonModule } from '@angular/common';
 import { ContadorCantidadComponent } from "../../core/components/contador-cantidad/contador-cantidad.component";
 import { Producto } from 'src/app/core/interfaces/productos';
 import { ProductosService } from '../../core/services/productos.service';
-import { Router, RouterModule } from '@angular/router';
 import { PerfilService } from '../../core/services/perfil.service';
+import { ConfigService } from 'src/app/core/services/config.service';
 
 @Component({
     selector: 'app-carrito',
@@ -20,12 +22,13 @@ export class CarritoComponent {
   CarritoService = inject(CarritoService);
   ProductosService = inject(ProductosService);
   perfilService = inject(PerfilService);
+  configService = inject(ConfigService)
   router = inject(Router)
 
-  productosCarrito: Producto[]=[];
+  productosCarrito: WritableSignal<Producto[]> = signal([]);
 
   subtotal = 0;
-  delivery = 100;
+  delivery = this.configService.configuracion().costoEnvio;
   total = 0;
   @ViewChild('dialog') dialog! : ElementRef<HTMLDialogElement>
 
@@ -33,8 +36,7 @@ export class CarritoComponent {
     this.headerService.titulo.set('Carrito');
     this.CarritoService.carrito.forEach(async itemCarrito => {
       const res = await this.ProductosService.getById(itemCarrito.idProducto)
-      if(res) this.productosCarrito.push(res);
-
+      if(res) this.productosCarrito.set([...this.productosCarrito(),res]);
     this.calcularInformacion();
     })
   }
@@ -46,9 +48,9 @@ export class CarritoComponent {
   calcularInformacion(){
     this.subtotal = 0;
     for (let i = 0; i < this.CarritoService.carrito.length; i++) {
-      this.subtotal += this.productosCarrito[i].precio * this.CarritoService.carrito[i].cantidad;
+      this.subtotal += this.productosCarrito()[i].precio * this.CarritoService.carrito[i].cantidad;
     }
-    this.total = this.subtotal + this.delivery;
+    this.total = this.subtotal + this.configService.configuracion().costoEnvio;
   }
 
   cambiarCantidadProducto(id: number, cantidad: number){

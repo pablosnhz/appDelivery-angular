@@ -41,7 +41,6 @@ export class ProductosService {
       if(parametros.aptoCeliaco && !producto.esCeliaco) return false;
       if(parametros.aptoVegano && !producto.esVegano) return false;
       const busquedaTitulo = producto.nombre.toLowerCase().includes(parametros.texto.toLowerCase());
-      console.log(busquedaTitulo)
       if(busquedaTitulo) return true;
       for (let i = 0; i < producto.ingredientes.length; i++) {
         const ingrediente = producto.ingredientes[i];

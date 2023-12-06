@@ -1,3 +1,4 @@
+<section>
 <form #formulario="ngForm" class="margen-pequeno" (ngSubmit)="guardarDatosPerfil()">
   <div>
     <label for="nombre">Nombre</label>
@@ -18,5 +19,6 @@
     <input type="number" name="telefono" id="telefono" [(ngModel)]="perfil.telefono" #telefono="ngModel" required minlength="5">
     <p class="error" *ngIf="telefono.invalid && telefono.touched">Ingrese un numero valido</p>
   </div>
-  <button [disabled]="formulario.invalid">Enviar</button>
+  <button [disabled]="formulario.invalid">Guardar</button>
 </form>
+</section>

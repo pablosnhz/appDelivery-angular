@@ -1,15 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Carrito } from '../interfaces/carrito-s';
+import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarritoService {
 
-  constructor() {
+  constructor(private config: ConfigService) {
     const cart = localStorage.getItem('carrito')
     if(cart){
-      this.carrito = JSON.parse(cart);
+      const carritoGuardado = JSON.parse(cart);
+      if(carritoGuardado){
+        const fechaGuardado = new Date(carritoGuardado.fecha);
+        const fecha = new Date();
+        // dias de vencimiento
+        if(fecha.getTime() - fechaGuardado.getTime() > 1000*60*60*24*4*this.config.configuracion().diasVencimientoCarrito){
+          this.vaciarCarrito();
+        } else {
+          this.carrito = carritoGuardado.productos;
+        }
+      }
     }
   }
 
@@ -29,7 +40,7 @@ export class CarritoService {
 
   eliminarProducto(idProducto: number){
     this.carrito = this.carrito.filter(producto => producto.idProducto !== idProducto)
-    if(this.carrito.length === 0) return localStorage.clear()
+    if(this.carrito.length === 0) return localStorage.removeItem('carrito');
     this.actualizarAlmacenamiento();
   }
 
@@ -43,12 +54,17 @@ export class CarritoService {
   }
 
   actualizarAlmacenamiento(){
-    localStorage.setItem('carrito', JSON.stringify(this.carrito))
+    const fecha = new Date();
+    const elementoAGuardar = {
+      fecha,
+      productos: this.carrito
+    }
+    localStorage.setItem('carrito', JSON.stringify(elementoAGuardar))
   }
 
   vaciarCarrito(){
     this.carrito = [];
-    localStorage.clear();
+    localStorage.removeItem('carrito');
   }
 
 }

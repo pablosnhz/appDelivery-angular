@@ -5,22 +5,34 @@
 form, form div {
     display: flex;
     flex-direction: column;
+    margin: 10px 30px;
+    color: rgba(101, 101, 101, 0.623);
 }
 
 form {
-  gap: 20px
+  gap: 20px;
+form div{
+  gap: 5px;
+}
 }
 
-form div{
-  gap: 5px
+input {
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.591);
+  padding-bottom: 10px;
+  &:focus{
+    outline: none;
+  }
 }
 
 button {
   height: 40px;
   font-weight: bold;
+  color: rgba(0, 0, 0, 0.594);
   background-color: rgba(109, 109, 109, 0.304);
   border: unset;
   border-radius: 10px;
+  margin: 20px 10px;
   cursor: pointer;
   &:disabled {
     background-color: rgba(65, 65, 65, 0.304);;
