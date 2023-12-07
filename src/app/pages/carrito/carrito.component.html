@@ -60,7 +60,7 @@
       <p class="negrita">${{ total }}</p>
     </div>
   </div>
-  <button id="enviar" (click)="enviarMensaje()">Realizar Pedido</button>
+  <button id="enviar" [disabled]="!perfilService.perfil()" (click)="enviarMensaje()">Realizar Pedido</button>
 </section>
 </ng-container>
 <ng-template #sinCarrito>

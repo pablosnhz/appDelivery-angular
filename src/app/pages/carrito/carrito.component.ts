@@ -34,11 +34,17 @@ export class CarritoComponent {
 
   ngOnInit(): void {
     this.headerService.titulo.set('Carrito');
-    this.CarritoService.carrito.forEach(async itemCarrito => {
+    this.buscarInformacionProductos().then(() =>{
+      this.calcularInformacion();
+    });
+  }
+
+  async buscarInformacionProductos(){
+    for (let i = 0; i < this.CarritoService.carrito.length; i++) {
+      const itemCarrito = this.CarritoService.carrito[i];
       const res = await this.ProductosService.getById(itemCarrito.idProducto)
       if(res) this.productosCarrito.set([...this.productosCarrito(),res]);
-    this.calcularInformacion();
-    })
+    }
   }
 
   eliminarProducto(idProducto : number){

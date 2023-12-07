@@ -21,7 +21,9 @@
 
 <div id="contenedor-productos" *ngIf="productos().length !== 0; else sinResultado">
   <app-tarjeta-producto *ngFor="let producto of productos()"
-  [producto]="producto"></app-tarjeta-producto>
+  [producto]="producto"
+  [routerLink]="['/articulo',producto.id]"></app-tarjeta-producto>
+
 </div>
 <ng-template #sinResultado>
   <h2>Sin resultado</h2>

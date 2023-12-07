@@ -7,18 +7,20 @@ import { HeaderService } from 'src/app/core/services/header.service';
 import { ProductosService } from '../../core/services/productos.service';
 import { TarjetaProductoComponent } from "../../core/components/tarjeta-producto/tarjeta-producto.component";
 import { Producto } from 'src/app/core/interfaces/productos';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-busqueda',
     templateUrl: './busqueda.component.html',
     styleUrls: ['./busqueda.component.scss'],
     standalone: true,
-    imports: [CommonModule, FormsModule, TarjetaProductoComponent]
+    imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
 })
 export class BusquedaComponent {
   headerService = inject(HeaderService);
   productosService = inject(ProductosService);
   productos: WritableSignal<Producto[]> = signal([]);
+  router = inject(Router)
 
   ngOnInit(): void {
     this.headerService.titulo.set('Buscar')
