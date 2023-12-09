@@ -6,18 +6,20 @@
   border-radius: 10px;
   margin: 20px 10%;
   padding: 5px 10px;
+
   input {
     width: 100%;
     background-color: unset;
     border: unset;
     font-size: large;
-    &:focus{
+
+    &:focus {
       outline: none;
     }
   }
 }
 
-#filtros-container{
+#filtros-container {
   display: flex;
   justify-content: space-evenly;
   height: 25px;
@@ -33,7 +35,7 @@ img {
   height: 100%;
 }
 
-#contenedor-productos{
+#contenedor-productos {
   margin: 10px;
   display: flex;
   flex-direction: column;

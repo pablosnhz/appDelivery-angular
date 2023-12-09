@@ -1,20 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 import { Busqueda } from 'src/app/core/interfaces/busqueda';
 import { HeaderService } from 'src/app/core/services/header.service';
 import { ProductosService } from '../../core/services/productos.service';
 import { TarjetaProductoComponent } from "../../core/components/tarjeta-producto/tarjeta-producto.component";
 import { Producto } from 'src/app/core/interfaces/productos';
-import { Router, RouterModule } from '@angular/router';
 
 @Component({
-    selector: 'app-busqueda',
-    templateUrl: './busqueda.component.html',
-    styleUrls: ['./busqueda.component.scss'],
-    standalone: true,
-    imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
+  selector: 'app-busqueda',
+  templateUrl: './busqueda.component.html',
+  styleUrls: ['./busqueda.component.scss'],
+  standalone: true,
+  imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
 })
 export class BusquedaComponent {
   headerService = inject(HeaderService);
@@ -33,7 +33,7 @@ export class BusquedaComponent {
     aptoVegano: false
   }
 
-  async buscar(){
+  async buscar() {
     this.productos.set(await this.productosService.buscar(this.parametrosBusqueda))
   }
 }
