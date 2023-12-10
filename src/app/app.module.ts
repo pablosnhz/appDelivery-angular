@@ -7,16 +7,16 @@ import { TabsComponent } from './core/components/tabs/tabs.component';
 import { HeaderComponent } from './core/components/header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TabsComponent,
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TabsComponent,
+        HeaderComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+    ],
 })
 export class AppModule { }

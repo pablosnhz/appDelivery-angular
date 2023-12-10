@@ -9,14 +9,16 @@ import { ProductosService } from '../../core/services/productos.service';
 import { TarjetaProductoComponent } from "../../core/components/tarjeta-producto/tarjeta-producto.component";
 import { Producto } from 'src/app/core/interfaces/productos';
 
+
 @Component({
-  selector: 'app-busqueda',
-  templateUrl: './busqueda.component.html',
-  styleUrls: ['./busqueda.component.scss'],
-  standalone: true,
-  imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
+    selector: 'app-busqueda',
+    templateUrl: './busqueda.component.html',
+    styleUrls: ['./busqueda.component.scss'],
+    standalone: true,
+    imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
 })
 export class BusquedaComponent {
+
   headerService = inject(HeaderService);
   productosService = inject(ProductosService);
   productos: WritableSignal<Producto[]> = signal([]);

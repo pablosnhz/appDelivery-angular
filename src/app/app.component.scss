@@ -10,6 +10,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  // background-color: #071714;
 }
 
 app-tabs {
@@ -21,3 +22,10 @@ main {
   overflow-y: scroll;
 }
 
+main::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}

@@ -20,7 +20,7 @@ header ::before {
   right: 0;
   bottom: 0;
   opacity: 0;
-  z-index: -1;
+  z-index: -2;
   transition: 500ms;
 }
 
@@ -33,8 +33,10 @@ header.extension ::before {
   background-color: unset;
 }
 
-h1 {
-  font-size: xx-large;
-  font-weight: 700;
-  text-align: center;
-}
+// h1 {
+//   font-size: xx-large;
+//   font-weight: 700;
+//   text-align: center;
+// }
+
+
