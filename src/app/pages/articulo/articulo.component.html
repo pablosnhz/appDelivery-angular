@@ -3,7 +3,7 @@
 <section class="margen-pequeno">
 
   <ul>
-    <span>Ingredientes: </span>
+    <span id="prioSpan">Ingredientes: </span>
     <li *ngFor="let ingrediente of producto?.ingredientes">{{ ingrediente }}</li>
   </ul>
 <div>
@@ -17,11 +17,11 @@
   </div>
 </div>
 
-  <label for="notas">Notas:</label>
+  <label id="prioSpan" for="notas">Notas:</label>
   <textarea name="notas" id="notas" cols="30" rows="10" [(ngModel)]="notas"></textarea>
   <div id="cantidad-container">
-  <label for="cantidad">Cantidad:</label>
-  <app-contador-cantidad (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
+  <label id="prioSpan" for="cantidad">Cantidad:</label>
+  <app-contador-cantidad id="prioSpan" (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
   </div>
   <button (click)="agregarAlCarrito()" >Agregar al carrito</button>
 

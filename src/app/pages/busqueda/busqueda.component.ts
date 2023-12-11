@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
@@ -17,15 +17,15 @@ import { Producto } from 'src/app/core/interfaces/productos';
     standalone: true,
     imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
 })
-export class BusquedaComponent {
+export class BusquedaComponent implements OnInit{
 
   headerService = inject(HeaderService);
   productosService = inject(ProductosService);
   productos: WritableSignal<Producto[]> = signal([]);
-  router = inject(Router)
+  router = inject(Router);
 
   ngOnInit(): void {
-    this.headerService.titulo.set('Buscar')
+    this.headerService.titulo.set('Buscar');
     this.productosService.getByAll().then(res => this.productos.set(res));
   }
 

@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   headerService = inject(HeaderService);
 
   ngOnInit(): void {
-    this.headerService.titulo.set('Home')
+    this.headerService.titulo.set('Home');
   }
 
 }

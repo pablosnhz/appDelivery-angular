@@ -3,12 +3,12 @@
   justify-content: space-around;
   overflow: hidden;
 
-  // background-color: rgb(255, 226, 188);
-  background-color: rgb(255, 183, 89);
+  background-color: #000000c4;
+  // background-color: rgb(255, 183, 89);
   border-radius: 25px 25px 0 0;
   border-top: 1px solid #3c3c3c87;
 
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 40px 4px;
+  box-shadow: rgba(73, 73, 73, 0.56) 0px 0px 40px 4px;
   height: 50px;
 }
 
@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.4s, box-shadow 0.3s;
   svg{
     margin: auto;
     display: block;
@@ -24,6 +25,11 @@
 }
 
 .seleccionado {
-  background-color: #00000038;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3) inset;
+  background-color: #b3b3b338;
+  box-shadow: 0 0 6px rgba(110, 110, 110, 0.3) inset;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  svg path {
+    stroke: #ffbf0084;
+    transition: stroke 0.3s;
+}
 }

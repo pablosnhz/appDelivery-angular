@@ -18,6 +18,7 @@
 
 ul li {
   display: inline;
+  color: rgb(255, 255, 255);
   &:not(:last-of-type)::after{
     content: ', ';
     margin-left: 2px;
@@ -30,8 +31,11 @@ ul li {
   height: 30px;
   align-items: center;
   gap: 10px;
+  color: rgb(0, 128, 0);
+  font-weight: bold;
   img{
     height: 30px;
+    filter: brightness(0) invert(1);
   }
 }
 
@@ -39,7 +43,8 @@ textarea {
   display: block;
   border-radius: 20px;
   border: unset;
-  background-color: rgba(200, 200, 200, 0.409);
+  color: rgb(255, 255, 255);
+  background-color: rgba(200, 200, 200, 0.599);
   margin-top: 10px;
   width: calc(100% - 30px);
   padding: 15px;
@@ -53,13 +58,22 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
+}
+
+#prioSpan {
+  color: rgba(255, 255, 255, 0.761);
 }
 
 button {
   width: 100%;
   border-radius: 20px;
   border: unset;
-  background: rgba(200, 200, 200, 0.409);
+  background-color: rgba(0, 0, 0, 0.304);
   font-size: larger;
-  padding: 10px;
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+  box-shadow: rgba(245, 246, 250, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  cursor: pointer;
 }
+

@@ -2,12 +2,14 @@ div {
   box-sizing: border-box;
   width: calc(100% - 20px);
   height: 100px;
-  margin: 0 5px;
+  margin: 0 10px;
   border-radius: 10px;
-  border: 1px solid #0000001d;
+  border: 1px solid #ffffff12;
   position: relative;
-}
+  display: flex;
+  flex-direction: column-reverse;
 
+}
 
 .fotoUrl {
   background-size: 50%;
@@ -17,7 +19,8 @@ div {
 
 h3 {
   margin: 10px 10px;
-  display: inline-block;
-  color: rgb(255, 0, 221);
-  }
+  font-size: 17px;
+  color: rgb(255, 188, 33);
+}
+
 

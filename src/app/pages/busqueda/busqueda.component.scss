@@ -4,17 +4,18 @@
   display: flex;
   align-items: center;
   height: 20px;
-  background-color: rgba(120, 120, 120, 0.124);
+  background-color: rgba(255, 0, 0, 0.124);
   border-radius: 10px;
   margin: 20px 10%;
   padding: 5px 10px;
+  box-shadow: rgba(231, 232, 239, 0.456) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  filter: brightness(0) invert(1);
 
   input {
     width: 100%;
     background-color: unset;
     border: unset;
     font-size: large;
-
     &:focus {
       outline: none;
     }
@@ -31,13 +32,16 @@
   display: flex;
   align-items: center;
   height: 25px;
-  color: green;
+  color: rgb(0, 128, 0);
+  font-weight: bold;
   img {
     filter: brightness(0) invert(1);
   }
 }
 
-
+#estilo {
+  color: rgb(255, 255, 255);
+}
 
 img {
   height: 100%;
