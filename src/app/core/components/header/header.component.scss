@@ -1,3 +1,4 @@
+
 header {
   position: relative;
   height: 80px;
@@ -24,6 +25,16 @@ header ::before {
   transition: 500ms;
 }
 
+header.action {
+  position: relative;
+  height: 80px;
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./../../../../assets/background/buscar.jpg);
+}
+
 header.extension ::before {
   opacity: 0.8;
 }
@@ -38,3 +49,4 @@ h1 {
   font-weight: 700;
   text-align: center;
 }
+
