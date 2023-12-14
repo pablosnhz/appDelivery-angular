@@ -12,7 +12,7 @@ header {
 header ::before {
   position: absolute;
   content: '';
-  background-image: url(./../../../../assets/background/header.jpg);
+  // background-image: url(./../../../../assets/background/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,16 +23,6 @@ header ::before {
   opacity: 0;
   z-index: -2;
   transition: 500ms;
-}
-
-header.action {
-  position: relative;
-  height: 80px;
-  color: rgb(255, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(./../../../../assets/background/buscar.jpg);
 }
 
 header.extension ::before {

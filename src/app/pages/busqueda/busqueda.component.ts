@@ -17,6 +17,7 @@ import { Producto } from 'src/app/core/interfaces/productos';
     standalone: true,
     imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
 })
+
 export class BusquedaComponent implements OnInit{
 
   headerService = inject(HeaderService);

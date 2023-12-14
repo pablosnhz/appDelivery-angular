@@ -61,3 +61,25 @@ h2 {
   text-align: center;
   margin-top: 50px;
 }
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+
+
+h1 {
+  font-size: xx-large;
+  font-weight: 700;
+  text-align: center;
+}

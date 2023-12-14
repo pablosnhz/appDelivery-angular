@@ -3,7 +3,8 @@
   justify-content: space-around;
   overflow: hidden;
 
-  background-color: #000000c4;
+
+  background: rgba(73, 73, 73, 0.56);
   // background-color: rgb(255, 183, 89);
   border-radius: 25px 25px 0 0;
   border-top: 1px solid #3c3c3c87;
@@ -25,11 +26,12 @@
 }
 
 .seleccionado {
-  background-color: #b3b3b338;
-  box-shadow: 0 0 6px rgba(110, 110, 110, 0.3) inset;
+  // background-color: #b3b3b338;
+  // box-shadow: 0 0 6px rgba(110, 110, 110, 0.3) inset;
   transition: background-color 0.3s, box-shadow 0.3s;
   svg path {
-    stroke: #ffbf0084;
+    stroke: #ffffff;
+    stroke-width: 1.5;
     transition: stroke 0.3s;
-}
+  }
 }

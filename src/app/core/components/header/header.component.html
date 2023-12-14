@@ -1,3 +1,4 @@
-<header [ngClass]="{extension: headerService.extension()}">
+<header [ngClass]="{extension: headerService.extension()}" [ngStyle]="{'background-image': 'url(' + headerService.urlHeader() + ')'}">
   <h1>{{ headerService.titulo() }}</h1>
 </header>
+

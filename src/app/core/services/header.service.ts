@@ -7,6 +7,9 @@ export class HeaderService {
 
   constructor() { }
 
-  titulo = signal('DeliApp');
+  titulo = signal('');
   extension = signal(false);
+  urlHeader = signal('./../../../assets/background/header.jpg');
+  urlBusq = signal('./../../../assets/background/buscar.jpg');
+
 }
