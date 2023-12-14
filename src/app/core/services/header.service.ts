@@ -11,5 +11,7 @@ export class HeaderService {
   extension = signal(false);
   urlHeader = signal('./../../../assets/background/header.jpg');
   urlBusq = signal('./../../../assets/background/buscar.jpg');
+  urlCarrito = signal('./../../../assets/background/carrito.jpg');
+
 
 }

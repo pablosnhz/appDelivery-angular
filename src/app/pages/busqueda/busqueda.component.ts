@@ -18,7 +18,8 @@ import { Producto } from 'src/app/core/interfaces/productos';
     imports: [CommonModule, FormsModule, TarjetaProductoComponent, RouterModule]
 })
 
-export class BusquedaComponent implements OnInit{
+export class BusquedaComponent implements OnInit {
+
 
   headerService = inject(HeaderService);
   productosService = inject(ProductosService);
@@ -29,6 +30,7 @@ export class BusquedaComponent implements OnInit{
     this.headerService.titulo.set('Buscar');
     this.productosService.getByAll().then(res => this.productos.set(res));
   }
+
 
   parametrosBusqueda: Busqueda = {
     texto: '',

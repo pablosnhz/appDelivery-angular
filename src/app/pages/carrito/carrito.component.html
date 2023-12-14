@@ -1,3 +1,7 @@
+<header [ngStyle]="{'background-image': 'url(' + headerService.urlCarrito() + ')'}">
+  <h1>{{ headerService.titulo() }}</h1>
+</header>
+
 <ng-container *ngIf="CarritoService.carrito.length !== 0 else sinCarrito">
   <section>
   <div id="tarjetas-container" class="margen-pequeno">

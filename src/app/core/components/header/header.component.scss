@@ -2,17 +2,19 @@
 header {
   position: relative;
   height: 80px;
-  color: aqua;
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 500ms ease-in-out;
+  // transition: 500ms ease-in-out;
+
+  background-color: #000000;
 }
 
 header ::before {
   position: absolute;
   content: '';
-  // background-image: url(./../../../../assets/background/header.jpg);
+  background-image: url(./../../../../assets/background/header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
