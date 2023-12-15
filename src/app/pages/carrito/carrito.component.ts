@@ -49,6 +49,7 @@ export class CarritoComponent {
 
   eliminarProducto(idProducto : number){
     this.CarritoService.eliminarProducto(idProducto);
+
   }
 
   calcularInformacion(){
