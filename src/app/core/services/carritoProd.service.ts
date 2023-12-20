@@ -5,6 +5,8 @@ import { ConfigService } from './config.service';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class CarritoService {
 
   constructor(private config: ConfigService) {
@@ -22,27 +24,28 @@ export class CarritoService {
         }
       }
     }
-  }
+  };
 
   carrito: Carrito[] = []
+
 
   agregarProducto(idProducto: number, cantidad: number, notas: string){
     const i = this.carrito.findIndex(producto => producto.idProducto === idProducto)
     if(i === -1){
       const nuevoProducto: Carrito = { idProducto: idProducto, cantidad: cantidad, notas: notas }
-      this.carrito.push(nuevoProducto)
+      this.carrito.push(nuevoProducto);
       } else {
         this.carrito[i].cantidad += cantidad;
       }
       this.actualizarAlmacenamiento();
-    }
+    };
 
 
   eliminarProducto(idProducto: number){
-    this.carrito = this.carrito.filter(producto => producto.idProducto !== idProducto)
+    this.carrito = this.carrito.filter(producto => producto.idProducto !== idProducto);
     if(this.carrito.length === 0) return localStorage.removeItem('carrito');
     this.actualizarAlmacenamiento();
-  }
+  };
 
   cambiarCantidadProducto(idProducto: number, cantidad: number){
     this.carrito = this.carrito.map(producto => {
@@ -51,21 +54,21 @@ export class CarritoService {
       return productoActual;
     })
     this.actualizarAlmacenamiento();
-  }
+  };
 
   actualizarAlmacenamiento(){
     const fecha = new Date();
     const elementoAGuardar = {
       fecha,
-      productos: this.carrito
+      productos: this.carrito,
     }
     localStorage.setItem('carrito', JSON.stringify(elementoAGuardar))
-  }
+  };
 
   vaciarCarrito(){
     this.carrito = [];
     localStorage.removeItem('carrito');
-  }
+  };
 
-}
+};
 

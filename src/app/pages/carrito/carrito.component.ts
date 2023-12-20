@@ -39,18 +39,20 @@ export class CarritoComponent {
     });
   }
 
+
   async buscarInformacionProductos(){
     for (let i = 0; i < this.CarritoService.carrito.length; i++) {
       const itemCarrito = this.CarritoService.carrito[i];
       const res = await this.ProductosService.getById(itemCarrito.idProducto)
-      if(res) this.productosCarrito.set([...this.productosCarrito(),res]);
+      if(res) this.productosCarrito.set([...this.productosCarrito(), res]);
     }
   }
 
-  eliminarProducto(idProducto : number){
+  eliminarProducto(idProducto : number ){
     this.CarritoService.eliminarProducto(idProducto);
-
+    this.calcularInformacion();
   }
+
 
   calcularInformacion(){
     this.subtotal = 0;
@@ -58,12 +60,16 @@ export class CarritoComponent {
       this.subtotal += this.productosCarrito()[i].precio * this.CarritoService.carrito[i].cantidad;
     }
     this.total = this.subtotal + this.configService.configuracion().costoEnvio;
+
   }
 
   cambiarCantidadProducto(id: number, cantidad: number){
     this.CarritoService.cambiarCantidadProducto(id, cantidad)
     this.calcularInformacion();
   }
+
+
+
 
   async enviarMensaje(){
     let pedido = '';
