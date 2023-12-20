@@ -8,7 +8,7 @@
   <div *ngFor="let producto of CarritoService.carrito, index as i" class="tarjeta-producto-container">
     <ng-container *ngIf="productosCarrito()[i]">
 
-    <div id="izquierda"[ngStyle]="{'background-image': 'url('+productosCarrito()[i].fotoUrl+')'}">
+    <div id="izquierda" [ngStyle]="{'background-image': 'url(' + productosCarrito()[i].fotoUrl + ')'}">
       <div>
         <img *ngIf="productosCarrito()[i].esCeliaco" src="./../../../assets/background/celiaco.png" alt="Apto Celiaco">
         <img *ngIf="productosCarrito()[i].esVegano" src="./../../../assets/background/hoja.png" alt="Apto Vegano">

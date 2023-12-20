@@ -48,8 +48,12 @@ export class CarritoComponent {
     }
   }
 
-  eliminarProducto(idProducto : number ){
+  eliminarProducto(idProducto: number) {
     this.CarritoService.eliminarProducto(idProducto);
+    const index = this.productosCarrito().findIndex(producto => producto.id === idProducto);
+    if (index !== -1) {
+      this.productosCarrito().splice(index, 1);
+    }
     this.calcularInformacion();
   }
 
