@@ -10,6 +10,15 @@
           {{ ingrediente }}
         </li>
       </ul>
-    <p id="precio">${{ producto.precio }}</p>
+    <div class="rating">
+      <div>
+        <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+          <i class="fa-solid fa-star active" [ngClass]="{'active': i <= producto.rating}"></i>
+        </ng-container>
+        <p id="ratingNum">({{ producto.rating }})</p>
+      </div>
+
+        <p id="precio">${{ producto.precio }}</p>
+    </div>
   </div>
 </div>

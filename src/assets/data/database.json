@@ -8,6 +8,7 @@
         "id": "1",
         "nombre": "Pizza de salame",
         "precio": 3000,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -21,6 +22,7 @@
         "id": "2",
         "nombre": "Pizza de Anana",
         "precio": 2500,
+        "rating": 2,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -42,6 +44,7 @@
         "id": "3",
         "nombre": "Hamburguesa con queso",
         "precio": 2000,
+        "rating": 3,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -55,6 +58,7 @@
         "id": "4",
         "nombre": "Hamburguesa especial",
         "precio": 2500,
+        "rating": 4,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -70,6 +74,7 @@
         "id": "5",
         "nombre": "Hamburguesa vegana",
         "precio": 2500,
+        "rating": 4,
         "esVegano": true,
         "esCeliaco": false,
         "ingredientes": [
@@ -83,6 +88,7 @@
         "id": "6",
         "nombre": "Hamburguesa celíaca",
         "precio": 2000,
+        "rating": 4,
         "esVegano": false,
         "esCeliaco": true,
         "ingredientes": [
@@ -96,6 +102,7 @@
         "id": "7",
         "nombre": "Hamburguesa americana",
         "precio": 4000,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -111,6 +118,7 @@
         "id": "8",
         "nombre": "Medallones",
         "precio": 3000,
+        "rating": 3,
         "esVegano": true,
         "esCeliaco": true,
         "ingredientes": [
@@ -131,6 +139,7 @@
         "id": "9",
         "nombre": "Cheesecake de Fresa",
         "precio": 3000,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -144,6 +153,7 @@
         "id": "10",
         "nombre": "Helado",
         "precio": 2500,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -165,6 +175,7 @@
         "id": "11",
         "nombre": "Paso del toro",
         "precio": 600,
+        "rating": 3,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -176,6 +187,7 @@
         "id": "12",
         "nombre": "Agua",
         "precio": 500,
+        "rating": 4,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -194,6 +206,7 @@
         "id": "13",
         "nombre": "Hamburguesa 2x1",
         "precio": 1000,
+        "rating": 4,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -207,6 +220,7 @@
         "id": "14",
         "nombre": "Pizza 2x1",
         "precio": 700,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": true,
         "ingredientes": [
@@ -226,6 +240,7 @@
         "id": "15",
         "nombre": "Locro",
         "precio": 1500,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -239,6 +254,7 @@
         "id": "16",
         "nombre": "Spagetti con salsa bolognesa",
         "precio": 2000,
+        "rating": 5,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [
@@ -253,6 +269,7 @@
         "id": "17",
         "nombre": "Sushi surtido",
         "precio": 4000,
+        "rating": 3,
         "esVegano": false,
         "esCeliaco": false,
         "ingredientes": [

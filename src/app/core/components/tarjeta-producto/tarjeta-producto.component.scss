@@ -55,3 +55,24 @@ ul li {
 }
 
 
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-top: 5px;
+
+}
+
+i {
+  font-size: 10px;
+  color: rgba(128, 128, 128, 0.54);
+}
+
+.active {
+  color: orange;
+}
+
+#ratingNum {
+    font-size: 12px;
+    display: inline;
+  }
