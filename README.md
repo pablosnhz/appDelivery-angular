@@ -1,13 +1,15 @@
 # DeliveryAngular
-RESUMEN 
+RESUMEN
 
-App delivery, para empezar cree un archivo json que incluian los productos como tambien se guardan los datos del pedido en un localstorage e hice la implementacion de los mismos mediante services. Tuve el componente principal que muestra el contenido los cuales hice referencia  a las secciones y declaradas mediante interfaces , para la estructura separe por componentes cada seccion para tener mejor organizado el codigo, los routers para vincular las diferentes secciones, directivas para hacer uso de los atributos que nos dejo hacer cosas como manipular el dom y agregar clases, los signals que nos permitio detectar si hubo cambios en el usuario, cantidad de productos y cambios en el carrito. Interpolaciones para hacer referencia a elementos a mostrar y para no usar el constructor se utilizo inject para sus dependencias y asi hacer uso del mismo en diversos componentes.
+Para empezar, creé un archivo JSON donde se incluyen todos los datos de los productos por sus categorias, así como los datos del pedido que se guardan en el 'localStorage'. Realice el llamado de los datos mediante funciones asincronas. Para el componente principal, mostré el contenido y hice referencia a las secciones, las cuales fueron declaradas mediante interfaces.
+Para mejorar la organización del código, decidí separar cada sección en componentes individuales. Además, utilicé routers para vincular las diferentes secciones, directivas para manipular el DOM y agregar clases, y signals para detectar cambios en el usuario, la cantidad de productos y modificaciones en el carrito.
+Hice uso de interpolaciones para hacer referencia a elementos que se muestran, y para evitar el uso del constructor, utilicé 'inject' para sus dependencias, permitiendo así su uso en varios componentes.
+En general, la estructura de la aplicación está diseñada para facilitar el mantenimiento y la comprensión del código para el diseño fui tomando referencias de otras paginas relacionadas con la compra de productos en linea.
 
 
 HEADER
 
 Para hacer referencia a las diferentes secciones y cambiar el titulo, agregue un signal en el service para  los titulos como el routeo de los mismos para su navegacion.
-Hice referencia con una ngClass, cree una signal para generar una transicion de desplazamiento en el home implementado con OnDestroy una vez salir de la seccion home, esta funcion solo se cumple para el home.
 
 
 MAIN 
@@ -41,6 +43,7 @@ Creamos la funcion para quitar un producto y cuando termina de realizar la funci
 Tambien hicimos la condicion con directivas, si no cumple con los datos de envio, entonces no se puede realizar el pedido, ya esto venia con la condicion explicita del required en el componente.
 hicimos la fecha de vencimiento del carrito por medio del date, despues de cuatro dias el carrito se resetea por si solo al igual que en el localStorage.
 Para terminar una vez realizado el pedido nos redirreaciona a wpp para enviar el mensaje del pedido y con el dialog generamos el modal, donde si ya terminamos de hacer la compra se resetean los datos del carrito y si no, poder seguir navegando, para finalizar resetee valores con uso de directivas, una vez finalizada la compra vuelve al home.
+Tuve problemas para detectar cambios con el calculo total, pude resolverla haciendo llamada a la funcion donde realizo los calculos totales, que tambien hago uso del mismo en otras funciones. donde tuve que hacer cambios con las funciones, donde tuve que iterar por el array para traer los productos por su id y en base a eso, genere el uso del slice para eliminar un producto con esto mismo tambien pude solucionar el problema para eliminar productos del carrito, donde eliminaba el seleccionado pero sin ninguna razon se borraba el ultimo. 
 
 
 PERFIL
